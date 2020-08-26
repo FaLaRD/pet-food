@@ -1,0 +1,14 @@
+// ****************
+// * Fixed Footer *
+// ****************
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+
+  &__main {
+    margin: auto;
+    width: 100%;
+  }
+}

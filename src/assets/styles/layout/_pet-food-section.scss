@@ -1,0 +1,37 @@
+.pet-section {
+  &__heading {
+    text-align: center;
+    color: $white;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+    justify-content: center;
+
+    @media (min-width: $lg) {
+      margin: 0 -4rem;
+    }
+  }
+
+  &__col {
+    padding: 0 1.5rem;
+    max-width: 100%;
+    flex: 0 0 100%;
+
+    @media (min-width: $sm) {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+
+    @media (min-width: $md) {
+      max-width: 33.333%;
+      flex: 0 0 33.333%;
+    }
+
+    @media (min-width: $lg) {
+      padding: 0 4rem;
+    }
+  }
+}

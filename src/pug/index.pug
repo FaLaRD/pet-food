@@ -1,0 +1,61 @@
+extends templates/main
+
+block variables
+  - const title = 'Pet food';
+  - const pageClass = 'index-page';
+
+block content
+
+  .container
+
+    .pet-section
+
+      .pet-section__heading.section-heading Ты сегодня покормил кота?
+
+      .pet-section__row
+
+        .pet-section__col
+
+          +b.FIGURE.pet-food.pet-section__pet-food
+            +e.A.main(href="#")
+              +e.DIV.promo
+                +e.DIV.desc Сказочное заморское явство
+                +e.DIV.heading Нямушка
+                  +e.SPAN.heading-opt с фуа-гра
+                +e.UL.details
+                  +e.LI.detail #[strong 10] порций
+                  +e.LI.detail мышь в подарок
+              +e.DIV.weight #[span 0,5] кг
+
+            +e.FIGCAPTION.summary Чего сидишь? Порадуй котэ, #[a(href="#") купи].
+
+        .pet-section__col
+
+          +b.FIGURE.pet-food.pet-section__pet-food
+            +e.A.main(href="#")
+              +e.DIV.promo
+                +e.DIV.desc Сказочное заморское явство
+                +e.DIV.heading Нямушка
+                  +e.SPAN.heading-opt с рыбой
+                +e.UL.details
+                  +e.LI.detail #[strong 40] порций
+                  +e.LI.detail #[strong 2] мыши в подарок
+              +e.DIV.weight #[span 2] кг
+
+            +e.FIGCAPTION.summary Головы щучьи с чесноком да свежайшая сёмгушка.
+
+        .pet-section__col
+
+          +b.FIGURE.pet-food.pet-section__pet-food
+            +e.A.main--disabled(href="#")
+              +e.DIV.promo
+                +e.DIV.desc Сказочное заморское явство
+                +e.DIV.heading Нямушка
+                  +e.SPAN.heading-opt с рыбой
+                +e.UL.details
+                  +e.LI.detail #[strong 100] порций
+                  +e.LI.detail #[strong 5] мышей в подарок
+                  +e.LI.detail заказчик доволен
+              +e.DIV.weight #[span 5] кг
+
+            +e.FIGCAPTION.summary Печалька, с курой закончился.

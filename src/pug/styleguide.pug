@@ -1,0 +1,345 @@
+extends templates/main
+
+block variables
+    - const title = 'Styleguide';
+    - const pageClass = 'ui-page';
+    - const breadcrumbs = ['Home', 'UI', 'Styleguide'];
+
+block content
+    style.
+        .demo {
+            margin-bottom: 1.5rem;
+        }
+
+        .icons-demo-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -.5rem;
+        }
+
+        .icons-demo-list li {
+            flex: 0 0 16.666%;
+            max-width: 16.666%;
+            padding: .5rem .5rem;
+            border: 1px solid #e6e6e6;
+            border-radius: .4rem;
+            padding: 1rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        .icons-demo-list small {
+            display: block;
+            font-size: 1.6rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .input-field {
+            margin-bottom: 1.5rem;
+        }
+
+    .container-fluid
+
+        main.content
+
+            h2 Buttons
+
+            //- a.btn(href="#") Button Default
+            //- a.btn(href="#" disabled) Button Default
+
+            .demo
+
+                h3 Primary Buttons
+
+                a.btn.btn--primary(href="#") Button Primary
+                a.btn.btn--primary(href="#" disabled) Button Primary
+
+            //- a.btn.btn--primary-reverse(href="#") Button Primary Reversed
+            //- a.btn.btn--primary-reverse(href="#" disabled) Button Primary Reversed
+
+            //- a.btn.btn--gray(href="#") Button Gray
+            //- a.btn.btn--gray(href="#" disabled) Button Gray
+
+            .demo
+
+                h3 Secondary Buttons
+
+                a.btn.btn--gray-reverse(href="#") Button Gray Reversed
+                a.btn.btn--gray-reverse(href="#" disabled) Button Gray Reversed
+
+            .demo
+
+                h3 Small Buttons
+
+                a.btn.btn--primary.btn--sm(href="#") Small Button Primary
+                a.btn.btn--primary.btn--sm(href="#" disabled) Small Button Primary
+
+                a.btn.btn--gray-reverse.btn--sm(href="#") Small Button Gray Reversed
+                a.btn.btn--gray-reverse.btn--sm(href="#" disabled) Small Button Gray Reversed
+
+            .demo
+
+                h3 Large Buttons
+
+                a.btn.btn--primary.btn--lg(href="#") Large Button Primary
+                a.btn.btn--primary.btn--lg(href="#" disabled) Large Button Primary
+
+                a.btn.btn--gray-reverse.btn--lg(href="#") Large Button Gray Reversed
+                a.btn.btn--gray-reverse.btn--lg(href="#" disabled) Large Button Gray Reversed
+
+            h2 Forms
+
+            .demo
+
+                .row
+
+                    .col-4
+
+                        .input-field
+                            label(for="field-1") Text field #[span *]
+                            .input-field__input
+                                input.input(type="text" name="text-field" placeholder="Text" id="field-1")
+
+                    .col-4
+
+                        .input-field
+                            label(for="field-2") Email field #[span *]
+                            .input-field__input
+                                input.input(type="email" name="email-field" placeholder="Email" id="field-2")
+
+                    .col-4
+
+                        .input-field
+                            label(for="field-3") Password field #[span *]
+                            .input-field__input
+                                input.input(type="password" name="password-field" placeholder="Password" id="field-3")
+
+                    .col-4
+
+                        .input-field.error
+                            label(for="field-4") Text field #[span *]
+                            .input-field__input
+                                input.input(type="text" name="text-field" placeholder="Text" id="field-4")
+                                +icon('error', 'input-notification__icon')
+                            small.input-notification Email contains dot in the address field
+
+                    .col-4
+
+                        .input-field.warning
+                            label(for="field-5") Email field #[span *]
+                            .input-field__input
+                                input.input(type="email" name="email-field" placeholder="Email" id="field-5")
+                                +icon('warning', 'input-notification__icon')
+                            small.input-notification Email contains dot in the address field
+
+                    .col-4
+
+                        .input-field.success
+                            label(for="field-6") Password field #[span *]
+                            .input-field__input
+                                input.input(type="password" name="password-field" placeholder="Password" id="field-6")
+                                +icon('success', 'input-notification__icon')
+                            small.input-notification Email contains dot in the address field
+
+                    .col-4
+
+                        .input-field
+                            label(for="field-7") Message field
+                            .input-field__input
+                                textarea.textarea(rows="5" name="textarea-field" placeholder="Message" id="field-7")
+
+                    .col-4
+
+                        .input-field
+                            label(for="field-8") Simple select
+                            select.js-select-default(id="field-8" name="default-select" placeholder="test")
+                                option(value="") Sort by
+                                option(value="name") Sort by name
+                                option(value="date") Sort by date
+                                option(value="price") Sort by price
+                                option(value="rating") Sort by rating
+
+                        .input-field
+                            label(for="field-9") Autocomplete select
+                            select.js-select-autocomplete(id="field-9" name="default-select")
+                                option(value="") Choose your fruit
+                                option(value="fruit-1") Apple
+                                option(value="fruit-2") Orange
+                                option(value="fruit-3") Banana
+                                option(value="fruit-4") Peach
+                                option(value="fruit-5") Mango
+                                option(value="fruit-6") Pineapple
+                                option(value="fruit-7") Tangerine
+
+                    .col-4
+
+                        .input-field
+                            .checkbox-label
+                                input.checkbox-label__input(type="checkbox" name="opt 1" id="opt-1")
+                                label.checkbox-label__main(for="opt-1") Pointer #[span.checkbox-label__amount (22)]
+
+                        .input-field
+                            .checkbox-label
+                                input.checkbox-label__input(type="checkbox" name="opt 2" id="opt-2")
+                                label.checkbox-label__main(for="opt-2") Cursor #[span.checkbox-label__amount (12)]
+
+                        .input-field
+                            .checkbox-label
+                                input.checkbox-label__input(type="checkbox" name="opt 3" id="opt-3")
+                                label.checkbox-label__main(for="opt-3") Crosshair #[span.checkbox-label__amount (12)]
+
+                        .input-field
+                            .radio-label
+                                input.radio-label__input(type="radio" name="opt" id="opt-4")
+                                label.radio-label__main(for="opt-4") Male #[span.radio-label__amount (22)]
+
+                        .input-field
+                            .radio-label
+                                input.radio-label__input(type="radio" name="opt" id="opt-5")
+                                label.radio-label__main(for="opt-5") Female #[span.radio-label__amount (12)]
+
+                        .input-field
+                            .radio-label
+                                input.radio-label__input(type="radio" name="opt" id="opt-6")
+                                label.radio-label__main(for="opt-6") Noset #[span.radio-label__amount (35)]
+
+            h2 SVG Icons
+
+            ul.icons-demo-list
+                li
+                    small #arrow-left
+                    +icon('arrow-left', '')
+                li
+                    small #arrow-right
+                    +icon('arrow-right', '')
+                li
+                    small #close
+                    +icon('close', '')
+                li
+                    small #email
+                    +icon('email', '')
+                li
+                    small #eye
+                    +icon('eye', '')
+                li
+                    small #facebook
+                    +icon('facebook', '')
+                li
+                    small #google
+                    +icon('google', '')
+                li
+                    small #home
+                    +icon('home', '')
+                li
+                    small #instagram
+                    +icon('instagram', '')
+                li
+                    small #logout
+                    +icon('logout', '')
+                li
+                    small #magnifying-glass
+                    +icon('magnifying-glass', '')
+                li
+                    small #padlock
+                    +icon('padlock', '')
+                li
+                    small #search
+                    +icon('search', '')
+                li
+                    small #trash
+                    +icon('trash', '')
+                li
+                    small #avatar
+                    +icon('avatar', '')
+                li
+                    small #battery-full
+                    +icon('battery-full', '')
+                li
+                    small #battery-half
+                    +icon('battery-half', '')
+                li
+                    small #battery-low
+                    +icon('battery-low', '')
+                li
+                    small #battery-warning
+                    +icon('battery-warning', '')
+                li
+                    small #calendar
+                    +icon('calendar', '')
+                li
+                    small #car-charge
+                    +icon('car-charge', '')
+                li
+                    small #chevron-down
+                    +icon('chevron-down', '')
+                li
+                    small #clear-weather
+                    +icon('clear-weather', '')
+                li
+                    small #cloud
+                    +icon('cloud', '')
+                li
+                    small #comment
+                    +icon('comment', '')
+                li
+                    small #cross
+                    +icon('cross', '')
+                li
+                    small #danger
+                    +icon('danger', '')
+                li
+                    small #download
+                    +icon('download', '')
+                li
+                    small #drop
+                    +icon('drop', '')
+                li
+                    small #error
+                    +icon('error', '')
+                li
+                    small #file-download
+                    +icon('file-download', '')
+                li
+                    small #home
+                    +icon('home', '')
+                li
+                    small #image
+                    +icon('image', '')
+                li
+                    small #lighthing
+                    +icon('lighthing', '')
+                li
+                    small #meter
+                    +icon('meter', '')
+                li
+                    small #oil
+                    +icon('oil', '')
+                li
+                    small #paper-plane
+                    +icon('paper-plane', '')
+                li
+                    small #pdf
+                    +icon('pdf', '')
+                li
+                    small #rain
+                    +icon('rain', '')
+                li
+                    small #remove
+                    +icon('remove', '')
+                li
+                    small #success
+                    +icon('success', '')
+                li
+                    small #sun
+                    +icon('sun', '')
+                li
+                    small #thermometer
+                    +icon('thermometer', '')
+                li
+                    small #typing
+                    +icon('typing', '')
+                li
+                    small #warning
+                    +icon('warning', '')

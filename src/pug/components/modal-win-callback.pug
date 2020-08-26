@@ -1,0 +1,31 @@
+form(data-modal-win="callback" action="/" method="POST" name="modal-form")
+  
+  .h3 Callback modal win
+  
+  .row
+
+    .col-md-6
+      
+      .input-field
+        label(for="field-1") Text field #[span *]
+        .input-field__input
+          input.input(type="text" name="text-field" placeholder="Text" id="field-1")
+    
+    .col-md-6
+      
+      .input-field
+        label(for="field-2") Email field #[span *]
+        .input-field__input
+          input.input(type="email" name="email-field" placeholder="Email" id="field-2")
+
+  .input-field
+    label(for="field-7") Message field
+    .input-field__input
+      textarea.textarea(rows="5" name="textarea-field" placeholder="Message" id="field-7")
+
+  .input-field
+    .checkbox-label
+      input.checkbox-label__input(type="checkbox" name="opt 1" id="opt-1")
+      label.checkbox-label__main(for="opt-1") Some privacy
+
+  input.btn.btn--primary.btn--block(type="submit" value="Send" name="send-data")

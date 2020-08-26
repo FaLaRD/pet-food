@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+// 1.Abstracts (Configuration and Helpers)
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+// 2.Vendors (from node_modules)
+@import "bootstrap/scss/bootstrap-reboot.scss";
+// @import "bootstrap/scss/bootstrap-grid.scss";
+// @import "swiper/swiper.scss";
+// @import "lightgallery.js/src/sass/lightgallery.scss";
+// @import "choices.js/src/styles/choices.scss";
+// @import "pikaday/scss/pikaday.scss";
+
+// 2.Vendors-extensions
+// @import "vendors-extensions/bootstrap";
+// @import "vendors-extensions/choices.scss";
+// @import "vendors/nouislider.scss";
+//@import "vendors/drift-basic.scss";
+// @import "vendors/simplebar.scss";
+//@import "vendors/card.scss";
+
+// 3.Base stuff
+@import "base/base";      // maybe reset
+@import "base/utilities"; // aka helpers
+@import "base/fonts";
+@import "base/typography";
+// @import "base/forms";
+// @import "base/table";
+// @import "base/animations";
+// @import "base/print";
+
+// 4.Layout
+@import "layout/main-layout";
+// @import "layout/header";
+// @import "layout/footer";
+// @import "layout/section";
+// @import "layout/sidebar";
+// @import "layout/carousels";
+@import "layout/pet-food-section";
+
+// 5.Components
+// @import "components/buttons";
+// @import "components/icons";
+// @import "components/tooltip";
+// @import "components/soc";
+// @import "components/breadcrumbs";
+// @import "components/pagination";
+// @import "components/user-authorized";
+// @import "components/navbar";
+// @import "components/tabs";
+// @import "components/modal-win";
+@import "components/pet-food";
+
+// 6.Pages (page-specific styles)
+//@import 'pages/inner-page';
+
+// 7.Themes
+// @import 'themes/default';

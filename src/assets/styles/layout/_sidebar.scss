@@ -1,0 +1,48 @@
+.sidebar-area {
+  @media (min-width: $md) {
+    padding-top: 4rem;
+  }
+
+  .h2, 
+  .h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: #303030;
+    margin-bottom: 2.5rem;
+    line-height: 1.1;
+    font-weight: 500;
+  }
+
+  @media (min-width: $md) {
+    > *:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+  
+  .sidebar-dropdown-products {
+    margin-bottom: 1.5rem;
+
+    &__main {
+      border-bottom: 1px dotted #e6e6e6;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .dropdown-products {
+    &__title {
+      font-size: 1.4rem;
+      line-height: 1.2;
+      max-width: 16rem;
+    }
+  }
+
+  .main-heading {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.reverse-order > .col-md-9 {
+  //-@media (min-width: $md) {
+    order: -1;
+  //-}
+}

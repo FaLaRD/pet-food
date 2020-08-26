@@ -1,0 +1,65 @@
+extends templates/main
+
+block variables
+    - const title = 'Components';
+    - const pageClass = 'ui-page';
+    - const breadcrumbs = ['Home', 'UI', 'Components'];
+
+block content
+    style.
+        .demo {
+            margin-bottom: 1.5rem;
+        }
+
+        .icons-demo-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -.5rem;
+        }
+
+        .icons-demo-list li {
+            flex: 0 0 16.666%;
+            max-width: 16.666%;
+            padding: .5rem .5rem;
+            border: 1px solid #e6e6e6;
+            border-radius: .4rem;
+            padding: 1rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        .icons-demo-list small {
+            display: block;
+            font-size: 1.6rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .input-field {
+            margin-bottom: 1.5rem;
+        }
+
+    .container-fluid
+
+        main.content
+
+            h2 Tabs
+
+            .demo
+
+                include components/tabs
+
+            h2 Modal Wins
+
+            .demo
+
+                a.btn.btn--primary.btn--sm(href="#" data-modal-win-trigger="callback") Open modal window
+
+            h2 Accordeons
+
+            .demo
+
+            h2 Carousels
+
+            .demo
